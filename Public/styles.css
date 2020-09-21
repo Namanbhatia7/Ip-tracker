@@ -20,8 +20,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-position: left;
-
-
+  text-align: -webkit-center;
 }
 
 .posn {
@@ -48,7 +47,8 @@ body {
     max-width: 60%;
     height: 400px;
     position: relative;
-    left: 126px;
+    left: 8px;
+    text-align: left;
     margin-top: 60px;
     padding: 1rem;
     border-top: solid 24px #cacaca;
@@ -72,8 +72,8 @@ body {
 }
 
 #typed {
-  font-size: 24px;
-  color: yellowgreen;
+  font-size: 19px;
+  color: #33ff00;
   text-align: center;
   font-family: 'Ubuntu Mono', monospace;
 }
