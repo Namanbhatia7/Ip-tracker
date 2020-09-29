@@ -24,19 +24,19 @@ body {
 }
 
 .posn {
-
-  margin-left: 15%;
   margin-top: 20%;
   font-family: 'Share Tech Mono', monospace;
   color: white;
-
-
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.posn2 {
-  margin-left: 14%;
-  margin-top: 7%;
-
+.form-inline {
+  display: block!important;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-align: center;
+  text-align: -webkit-center;
 }
 
 .terminal {
@@ -76,4 +76,46 @@ body {
   color: #33ff00;
   text-align: center;
   font-family: 'Ubuntu Mono', monospace;
+}
+
+.contain {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  height: -webkit-fill-available;
+  z-index: 2;
+  background: #00e6463b;
+  opacity: 0.5;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background: url(images/bgImage.jpg) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: bottom;
+    text-align: -webkit-center;
+  }
+
+  .contain {
+    text-align: -webkit-center;
+    background: #286d3a4d;
+    position: absolute;
+    top: 231px;
+    padding: 2rem;
+}
+
+
+.posn {
+  margin-top: 0;
+}
 }

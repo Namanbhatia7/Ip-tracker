@@ -12,13 +12,16 @@
 </head>
 
 <body>
-    <h2 class="posn">Enter the Ip address</h2>
+    <div class="overlay"></div>
+    <div class="contain">
+        <h2 class="posn">Enter the Ip address</h2>
     <!-- Search form -->
-    <form action="/" class="form-inline" method="POST">
-        <i class="fas fa-search posn2" aria-hidden="true"></i>
-        <input class="form-control form-control-sm ml-3 w-25 " type="text" name="ip" placeholder="Search"
-            aria-label="Search">
-    </form>
+        <form action="/" class="form-inline" method="POST">
+          <i class="fas fa-search posn2" aria-hidden="true"></i>
+          <input class="form-control form-control-sm ml-3 w-25 " type="text" name="ip" placeholder="Search"
+            aria-label="Search" autocomplete="off">
+        </form>
+    </div>
 </body>
 
 </html>
