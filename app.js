@@ -7,31 +7,27 @@ const ejs = require('ejs');
 
 const app = express();
 app.use(express.static("Public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 
 
-app.get("/", function (req, res) {
+app.get("/", function(req,res){
 
-    res.sendFile(__dirname + "/home.html")
+res.sendFile(__dirname + "/home.html")
 
 })
 
-app.post("/", function (req, res) {
-    res.sendFile(__dirname + "/home.html")
-})
 
-
-app.post("/result", function (req, res) {
-
+app.post("/", function(req,res){
+ 
     var ipAddress = req.body.ip;
     var URL = "http://ip-api.com/json/" + ipAddress
 
+    
 
 
-
-    request(URL, function (error, response, body) {
+    request(URL, function(error,response, body){
         var loc = JSON.parse(body)
         var country = loc.country;
         var countryCode = loc.countryCode;
@@ -45,11 +41,11 @@ app.post("/result", function (req, res) {
         var org = loc.org;
         var asname = loc.as;
 
+        
+        
+        console.log(country);   
 
-
-        console.log(country);
-
-        res.render('data', {
+        res.render('data' ,{
             country: country,
             countryCode: countryCode,
             regionName: region,
@@ -62,15 +58,15 @@ app.post("/result", function (req, res) {
             organization: org,
             as: asname
 
-        });
-
+        } );
+        
     });
-
-
+   
+    
 })
 
-app.listen(3000, function () {
+app.listen(3000, function(){
 
     console.log("Server is running on PORT 3000");
-
+    
 })
