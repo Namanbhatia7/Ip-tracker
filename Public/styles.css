@@ -93,6 +93,23 @@ body {
   opacity: 0.5;
 }
 
+.reset-btn {
+  margin-top: 5%;
+  padding: 0.5%;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.reset-btn:hover {
+  -webkit-box-shadow: -1px 2px 15px -2px rgba(110, 224, 146, 1);
+  -moz-box-shadow: -1px 2px 15px -2px rgba(110, 224, 146, 1);
+  box-shadow: -1px 2px 15px -2px rgba(110, 224, 146, 1);
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 600px) {
