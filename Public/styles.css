@@ -14,7 +14,7 @@
 }
 
 body {
-  background: url(bgImage.jpg) no-repeat fixed;
+  background: url(Public/images/bgImage.jpg) no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
